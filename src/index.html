@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/TaquitoPNG.png">
+    <title>Taquito</title>
+    <link rel="stylesheet" href="style.css"> <!-- Vincula el archivo CSS externo -->
+    <link rel="stylesheet" href="stylecreateToken.css">
+    <link rel="stylesheet" href="styleBuy.css">
+    <script src="https://unpkg.com/@solana/web3.js@1.107.2/dist/solana-web3.min.js"></script>
+  <script src="https://unpkg.com/@solana/spl-token@0.3.1/dist/spl-token.min.js"></script>
+  <script src="https://terminal.jup.ag/main-v2.js" data-preload defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/TaquitoPNG.png" alt="Logo" id="header-logo">
+        <h2>Taquito Official Address: DFtQKLHwAseur2QcG8AX4YqQ4pTbK9xjYL1iasqgR1zf</h2>
+        <img src="images/solLogo.png" alt="Logo" id="sol-logo">
+        <div class="BT_Top">
+            <button id="swap-button">Swap Taquito</button>
+        </div>
+    </header>
+    <br> <br> <br>
+    <div id="form-section" class="carousel">
+        <div class="carousel-wrapper">
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <div class="carousel-text">
+                        <h2>Introduction</h2>
+                        <p>Welcome to the exciting and vibrant world of "Taquito" (TQTO), a token that captures the essence of all the memes, joy, and humor that have made the Internet such a special place. Taquito is not just a token; it’s a celebration of digital culture and a vehicle for fun and community.</p>
+                    </div>
+                    <div class="carousel-image">
+                        <img src="images/TaquitoPNG.png" alt="Imagen 1">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <div class="carousel-text">
+                        <h2>Token Philosophy</h2>
+                        <p>At the heart of Taquito is the community. We believe that the power of the Internet lies in its users, which is why TQTO is designed to be a token by the people, for the people. Our community not only helps grow the project but also benefits directly from its success. Through voting, polls, and a democratic approach, every community member has a voice in the future of the token.</p>
+                    </div>
+                    <div class="carousel-image">
+                        <img src="images/FILOSOFIA.png" alt="Imagen 1">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <div class="carousel-text">
+                        <h2>Key Features</h2>
+                        <ul id="Features">
+                            <li>Symbol: TQTO</li>
+                            <li>Total Supply: 420,690,000,000.00 TQTO</li>
+                            <li>Purpose: Used in exchanges (DEX and CEX), application payments, and more.</li>
+                            <li>Technology: Built on the Solana blockchain, offering fast and low-cost transactions.</li>
+                            <li>Community Use: Key decisions will be made through community participation in polls and votes.</li>
+                        </ul>
+                    </div>
+                    <div class="carousel-image">
+                        <img src="images/FEATURES.png" alt="Imagen 1">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <div class="carousel-text">
+                        <h2>Whitepaper</h2>
+                        <p>For those interested in more technical details and the long-term vision of Taquito, we have prepared a comprehensive Whitepaper. You can access the Whitepaper <a id="Whitepaper" target="_blank" href="Taquito_Whitepaper.pdf">here</a> to delve into the economic, technical, and strategic aspects of TQTO.</p>
+                    </div>
+                    <div class="carousel-image">
+                        <img src="images/whitpaper.png" alt="Imagen 1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+            <!-- Añadir más puntos según el número de slides -->
+        </div>
+    </div>
+    <br> <br> <br>
+
+<hr>
+    <footer id="footer">
+        <h1>Tokenomic 🌮 Max supply 420,690B</h1>
+        <p>Disclaimer: If you are tired of conventional currencies and want to be part of something truly exciting, Taquito (TQTO) is the option for you. Get ready to laugh, trade, and innovate with the most dynamic community in the world of cryptocurrencies. Together we will take Taquito to the highest and beyond! 🚀🌕 Remember, with Taquito, you're not just investing in a token, you're joining a movement! So get ready, hold on tight and enjoy the ride. The future is bright, the future is Taquito (TQTO).</p> <br> <hr> <br> <br>
+    </footer>
+    <script type="module" src="dist/bundle.js"></script>
+    <script src="carrusel.js"></script>
+    <script src="app.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const swapButton = document.getElementById('swap-button');
+            swapButton.addEventListener('click', function () {
+                window.location.href = 'swap.html';
+            });
+        });
+    </script>
+<div id="root"></div>
+</body>
+</html>
+

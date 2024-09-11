@@ -1,0 +1,112 @@
+/* styles.css */
+body {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('images/fondo 2.jpg'); /* Corrige el nombre del archivo si es necesario */
+    background-size: cover; /* Asegura que la imagen de fondo cubra todo el área */
+    background-position: center; /* Centra la imagen de fondo */
+    margin: 0; /* Elimina el margen por defecto del body */
+}
+
+#jupiter-terminal {
+    width: 600px;
+    height: 1200px;
+}
+
+header {
+    width: 100%; /* Ajusta el ancho del encabezado a todo el ancho de la pantalla */
+    max-width: 1500px; /* Limita el ancho máximo */
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    padding: 10px; /* Agrega un poco más de espacio alrededor del encabezado */
+    border-bottom: 1px solid #ffffff;
+    position: relative;
+}
+
+.header-content {
+    display: flex; /* Utiliza flexbox para alinear los botones horizontalmente */
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 10px; /* Espacio arriba de los botones */
+}
+
+.header-content a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block; /* Asegura que los botones se comporten como bloques en línea */
+}
+
+.header-content a:hover {
+    background-color: grey;
+}
+
+#Home_Button {
+    background-color: white;
+    color: black;
+}
+
+#header-logo {
+    width: 100px;
+    height: 100px;
+    animation: scaleLogo 2s infinite ease-in-out;
+}
+
+@keyframes scaleLogo {
+    0%, 100% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+#jupiter-terminal {
+    width: 50%;
+    height: 700px; 
+}
+
+#buy-image {
+    max-width: 50%;
+    animation: scaleImage 3s infinite ease-in-out; 
+    width: 150px;
+    height: 150px;
+}
+
+@keyframes scaleImage {
+    0%, 100% {
+        transform: scale(1); 
+    }
+    50% {
+        transform: scale(1.2); 
+    }
+}
+
+.Titulo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.Titulo h1 {
+    font-size: 50px;
+    color: #ffffff; 
+    margin-right: 50px; 
+}
+
+/* CSS para el botón Info */
+#Info_Button {
+    color: #000000; 
+    border-radius: 5px;
+    background-color: #ffffff; 
+}
+
+

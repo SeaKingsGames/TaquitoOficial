@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/fondo\ 2.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    position: relative; /* Necesario para posicionar los botones absolutamente */
+}
+
+#header-logo {
+    width: 70px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+header h2 {
+    color: #ffffff; /* Color del texto del título */
+    margin: 0;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    white-space: nowrap; /* Evita que el texto se ajuste en varias líneas */
+    overflow: hidden; /* Oculta el texto que se extiende fuera del botón */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos si el texto es demasiado largo */
+    position: relative;
+    left: +690px;
+}
+
+#CreateTokenBT {
+    background-color: #ffffff; /* Color de fondo del nuevo botón */
+    color: #000000; /* Color del texto del nuevo botón */
+    width: 150px; /* Ancho fijo del botón */
+}
+
+
+#CreateTokenBT:hover {
+    background-color: #6b6a6a; /* Color de fondo al pasar el cursor */
+}
+
+#connect-wallet {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-image: url('images/s1.png'); /* Ruta a tu imagen */
+    background-size: 25px 25px; /* Tamaño de la imagen */
+    background-repeat: no-repeat;
+    background-position: left center; /* Posiciona la imagen a la izquierda del texto */
+    text-align: center; /* Alinea el texto a la izquierda para que no se superponga a la imagen */
+    padding-left: 40px; /* Agrega espacio para la imagen */
+    width: 150px; /* Ancho fijo del botón */
+    background-position: 5px center; /* Mueve la imagen 10px más a la izquierda */
+}
+
+#connect-wallet:hover {
+    background-color: #657586;
+}
+
+#sol-logo{
+    width: 70px;
+    position: relative;
+    left: +10px;
+}
+
+#Features{
+    color: #ffffff;
+}
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1400px; /* Ajusta el ancho máximo del carrusel */
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carousel-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.carousel-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.carousel-text h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.carousel-text p {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.carousel-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-image img {
+    max-width: 100%;
+    height: auto;
+    animation: float 4s ease-in-out infinite; /* Animación de flotación */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px); /* Ajusta la distancia que sube la imagen */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.carousel-dots {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.dot {
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #007592;
+}
+
+footer{
+    color: #ffffff;
+    max-width: 2000px;
+    text-align: center;
+}
+
+

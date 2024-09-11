@@ -1,0 +1,29 @@
+#progress-container {
+    width: 100%;
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 30px;
+    background: #4caf50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+
+input, button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
