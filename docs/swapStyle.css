@@ -19,18 +19,6 @@ body {
     height: 100vh; /* Usa la altura del viewport para la terminal */
     max-height: 700px; /* Altura máxima */
 }
-
-header {
-    width: 100%; /* Ajusta el ancho del encabezado a todo el ancho de la pantalla */
-    max-width: 1500px; /* Limita el ancho máximo */
-    display: flex;
-    flex-direction: column; /* Alinea los elementos verticalmente */
-    align-items: center; /* Centra los elementos horizontalmente */
-    padding: 10px; /* Agrega un poco de espacio alrededor del encabezado */
-    border-bottom: 1px solid #ffffff;
-    position: relative;
-}
-
 .header-content {
     display: flex; /* Utiliza flexbox para alinear los botones horizontalmente */
     gap: 10px; /* Espacio entre los botones */
@@ -160,4 +148,20 @@ header {
         font-size: 12px; /* Reduce más el tamaño de la fuente en botones */
         padding: 6px 12px; /* Ajusta el padding para botones pequeños */
     }
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    word-break: break-word; /* Permite que la dirección se divida */
+}
+
+#token-address {
+    word-wrap: break-word;
+    max-width: 100%; /* Asegura que el texto se ajuste dentro del contenedor */
+    font-size: 12px; /* Tamaño de la fuente más pequeño para que no ocupe mucho espacio */
+    margin-top: 10px; /* Agrega espacio entre el logo y la dirección */
 }

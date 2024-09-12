@@ -9,16 +9,6 @@ body {
     background-repeat: no-repeat;
 }
 
-header {
-    display: flex;
-    align-items: center; /* Alinea los elementos verticalmente en el centro */
-    padding: 5px;
-    border-bottom: 1px solid #ccc;
-    position: relative; /* Necesario para posicionar los botones absolutamente */
-    justify-content: space-between; /* Asegura que los elementos estén distribuidos en todo el espacio disponible */
-    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si es necesario */
-}
-
 #header-logo {
     width: 50px; /* Ajusta el tamaño de la imagen */
     height: auto; /* Mantiene la proporción de la imagen */
@@ -142,7 +132,7 @@ button {
 }
 
 .carousel-image img {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     animation: float 4s ease-in-out infinite; /* Animación de flotación */
 }
@@ -224,3 +214,20 @@ footer {
         padding: 8px 15px;
     }
 }
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    word-break: break-word; /* Permite que la dirección se divida */
+}
+
+#token-address {
+    word-wrap: break-word;
+    max-width: 100%; /* Asegura que el texto se ajuste dentro del contenedor */
+    font-size: 12px; /* Tamaño de la fuente más pequeño para que no ocupe mucho espacio */
+    margin-top: 10px; /* Agrega espacio entre el logo y la dirección */
+}
+
