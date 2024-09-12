@@ -6,15 +6,18 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('images/fondo 2.jpg'); /* Corrige el nombre del archivo si es necesario */
+    background-image: url('images/fondo 2.jpg'); /* Asegura que el nombre del archivo sea correcto */
     background-size: cover; /* Asegura que la imagen de fondo cubra todo el área */
     background-position: center; /* Centra la imagen de fondo */
     margin: 0; /* Elimina el margen por defecto del body */
+    min-height: 100vh; /* Asegura que ocupe toda la pantalla en altura */
 }
 
 #jupiter-terminal {
-    width: 600px;
-    height: 1200px;
+    width: 90%; /* Ajusta a 90% del ancho de la pantalla para hacerlo más responsivo */
+    max-width: 600px; /* Limita el tamaño máximo en pantallas grandes */
+    height: 100vh; /* Usa la altura del viewport para la terminal */
+    max-height: 700px; /* Altura máxima */
 }
 
 header {
@@ -23,7 +26,7 @@ header {
     display: flex;
     flex-direction: column; /* Alinea los elementos verticalmente */
     align-items: center; /* Centra los elementos horizontalmente */
-    padding: 10px; /* Agrega un poco más de espacio alrededor del encabezado */
+    padding: 10px; /* Agrega un poco de espacio alrededor del encabezado */
     border-bottom: 1px solid #ffffff;
     position: relative;
 }
@@ -54,8 +57,8 @@ header {
 }
 
 #header-logo {
-    width: 100px;
-    height: 100px;
+    width: 80px; /* Ajusta el tamaño del logo para hacerlo más flexible */
+    height: auto;
     animation: scaleLogo 2s infinite ease-in-out;
 }
 
@@ -68,16 +71,11 @@ header {
     }
 }
 
-#jupiter-terminal {
-    width: 50%;
-    height: 700px; 
-}
-
 #buy-image {
-    max-width: 50%;
+    max-width: 100%; /* Asegura que la imagen no supere el ancho disponible */
     animation: scaleImage 3s infinite ease-in-out; 
-    width: 150px;
-    height: 150px;
+    width: 150px; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+    height: 150px; /* Ajusta la altura de la imagen en pantallas pequeñas */
 }
 
 @keyframes scaleImage {
@@ -92,14 +90,15 @@ header {
 .Titulo {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center; /* Cambia para centrar el texto en todas las pantallas */
     padding: 20px;
 }
 
 .Titulo h1 {
-    font-size: 50px;
+    font-size: 6vw; /* Usa unidades relativas para hacerlo adaptable */
     color: #ffffff; 
-    margin-right: 50px; 
+    text-align: center; /* Centra el título */
+    margin-right: 0; /* Elimina el margen adicional */
 }
 
 /* CSS para el botón Info */
@@ -109,4 +108,56 @@ header {
     background-color: #ffffff; 
 }
 
+/* Media Queries para mejorar la responsividad */
+@media (max-width: 768px) {
+    #jupiter-terminal {
+        width: 100%; /* En pantallas más pequeñas, el terminal ocupará todo el ancho */
+        height: 100%; /* Ajusta la altura para pantallas pequeñas */
+    }
 
+    .Titulo h1 {
+        font-size: 8vw; /* Cambia el tamaño del título en pantallas pequeñas */
+    }
+
+    #buy-image {
+        width: 120px; /* Ajusta el tamaño de la imagen en pantallas más pequeñas */
+        height: 120px;
+    }
+
+    #header-logo {
+        width: 60px; /* Ajusta el tamaño del logo en pantallas pequeñas */
+    }
+
+    header {
+        padding: 5px; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .header-content a {
+        font-size: 14px; /* Reduce el tamaño de la fuente en botones */
+        padding: 8px 16px; /* Ajusta el padding para hacer más pequeños los botones */
+    }
+}
+
+@media (max-width: 480px) {
+    #jupiter-terminal {
+        height: auto; /* Permite que la terminal crezca según el contenido */
+    }
+
+    .Titulo h1 {
+        font-size: 10vw; /* Aumenta el tamaño del título en pantallas extra pequeñas */
+    }
+
+    #buy-image {
+        width: 100px; /* Ajusta aún más el tamaño de la imagen */
+        height: 100px;
+    }
+
+    #header-logo {
+        width: 50px; /* Reduce el logo aún más para pantallas pequeñas */
+    }
+
+    .header-content a {
+        font-size: 12px; /* Reduce más el tamaño de la fuente en botones */
+        padding: 6px 12px; /* Ajusta el padding para botones pequeños */
+    }
+}

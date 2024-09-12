@@ -1,3 +1,4 @@
+/* Estilos globales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,21 +15,25 @@ header {
     padding: 5px;
     border-bottom: 1px solid #ccc;
     position: relative; /* Necesario para posicionar los botones absolutamente */
+    justify-content: space-between; /* Asegura que los elementos estén distribuidos en todo el espacio disponible */
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si es necesario */
 }
 
 #header-logo {
-    width: 70px; /* Ajusta el tamaño de la imagen */
+    width: 50px; /* Ajusta el tamaño de la imagen */
     height: auto; /* Mantiene la proporción de la imagen */
 }
 
 header h2 {
     color: #ffffff; /* Color del texto del título */
     margin: 0;
+    font-size: 1.5rem; /* Tamaño de fuente relativo para adaptarse mejor */
 }
 
 .header-buttons {
     display: flex;
     gap: 10px; /* Espacio entre los botones */
+    flex-wrap: wrap; /* Permite que los botones se adapten en dispositivos pequeños */
 }
 
 button {
@@ -39,16 +44,15 @@ button {
     white-space: nowrap; /* Evita que el texto se ajuste en varias líneas */
     overflow: hidden; /* Oculta el texto que se extiende fuera del botón */
     text-overflow: ellipsis; /* Muestra puntos suspensivos si el texto es demasiado largo */
-    position: relative;
-    left: +690px;
+    margin: 5px 0; /* Espaciado para evitar que los botones estén demasiado juntos en dispositivos pequeños */
 }
 
 #CreateTokenBT {
     background-color: #ffffff; /* Color de fondo del nuevo botón */
     color: #000000; /* Color del texto del nuevo botón */
-    width: 150px; /* Ancho fijo del botón */
+    width: 100%; /* Ancho del 100% del contenedor del botón en pantallas pequeñas */
+    max-width: 150px; /* Limita el ancho máximo */
 }
-
 
 #CreateTokenBT:hover {
     background-color: #6b6a6a; /* Color de fondo al pasar el cursor */
@@ -65,31 +69,29 @@ button {
     background-size: 25px 25px; /* Tamaño de la imagen */
     background-repeat: no-repeat;
     background-position: left center; /* Posiciona la imagen a la izquierda del texto */
-    text-align: center; /* Alinea el texto a la izquierda para que no se superponga a la imagen */
+    text-align: center;
     padding-left: 40px; /* Agrega espacio para la imagen */
-    width: 150px; /* Ancho fijo del botón */
-    background-position: 5px center; /* Mueve la imagen 10px más a la izquierda */
+    width: 100%;
+    max-width: 150px;
+    background-position: 5px center;
 }
 
 #connect-wallet:hover {
     background-color: #657586;
 }
 
-#sol-logo{
-    width: 70px;
-    position: relative;
-    left: +10px;
+#sol-logo {
+    width: 50px;
 }
 
-#Features{
+#Features {
     color: #ffffff;
 }
-
 
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 1400px; /* Ajusta el ancho máximo del carrusel */
+    max-width: 100%; /* Asegura que el carrusel sea responsivo */
     margin: auto;
     overflow: hidden;
 }
@@ -105,6 +107,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Permite que el contenido se ajuste en pantallas pequeñas */
 }
 
 .carousel-content {
@@ -113,6 +116,7 @@ button {
     align-items: center;
     width: 100%;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 .carousel-text {
@@ -122,12 +126,12 @@ button {
 
 .carousel-text h2 {
     margin: 0;
-    font-size: 24px;
+    font-size: 1.5rem; /* Tamaño de fuente adaptable */
     color: #ffffff;
 }
 
 .carousel-text p {
-    font-size: 16px;
+    font-size: 1rem; /* Ajusta el tamaño del texto */
     color: #ffffff;
 }
 
@@ -148,7 +152,7 @@ button {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-50px); /* Ajusta la distancia que sube la imagen */
+        transform: translateY(-30px); /* Ajusta la distancia que sube la imagen */
     }
     100% {
         transform: translateY(0);
@@ -174,10 +178,49 @@ button {
     background-color: #007592;
 }
 
-footer{
+footer {
     color: #ffffff;
-    max-width: 2000px;
+    max-width: 100%;
     text-align: center;
+    padding: 10px;
 }
 
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    header h2 {
+        font-size: 1.2rem;
+    }
 
+    button {
+        width: 100%;
+        max-width: none;
+    }
+
+    #CreateTokenBT,
+    #connect-wallet {
+        width: 100%;
+    }
+
+    .carousel-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-text p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #header-logo {
+        width: 40px;
+    }
+
+    button {
+        padding: 8px 15px;
+    }
+}
